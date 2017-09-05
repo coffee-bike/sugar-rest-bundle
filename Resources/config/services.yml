@@ -9,16 +9,16 @@ services:
 #
     sugarserver:
         class: NeoArno\sugarRESTBundle\SugarREST\SugarRESTServer
-        arguments: [@sugarcall]
+        arguments: ["@sugarcall"]
 
     sugaruser:
         class: NeoArno\sugarRESTBundle\SugarREST\SugarRESTUser
-        arguments: [@sugarcall]
+        arguments: ["@sugarcall"]
 
     sugarbean:
         class: NeoArno\sugarRESTBundle\SugarREST\SugarRESTBean
-        arguments: [@sugarcall]
+        arguments: ["@sugarcall"]
 
     sugarcall:
         class: NeoArno\sugarRESTBundle\SugarREST\SugarRESTCall
-        arguments: [@api_caller, %rest_url%, %api_version%]
+        arguments: ["@api_caller", %rest_url%, %api_version%]
